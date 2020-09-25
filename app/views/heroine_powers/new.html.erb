@@ -1,0 +1,8 @@
+<% form_with model: @heroine_power do |f| %>
+    <% f.label "Choose a heroine" %>
+    <% f.collection_select: :heroine_id, @heroines, :id, :name %>
+    <% f.label "Choose a power" %>
+    <% f.collection_select: :power_id, @powers, :id, :name %>
+    <% f.submit %>
+    <% end %>
+    
