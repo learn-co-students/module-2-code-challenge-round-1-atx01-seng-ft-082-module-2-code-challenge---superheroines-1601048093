@@ -1,0 +1,5 @@
+<center><h1> Feel the Power of Heroines! </h1>
+<hr><br>
+<% @heroine_powers.each do | heroine_power | %>
+    <li><%=link_to heroine_power.heroine.super_name, heroine_path(heroine_power) %></li>
+    <%end%>
