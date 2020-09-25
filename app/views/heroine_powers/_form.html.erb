@@ -1,0 +1,13 @@
+<center><h1> Hit the Heroine Power: </h1>
+<%=form_for @heroine_power do | f | %>
+    <%= f.label :heroine %>
+    <%= f.collection_select :heroine, @heroines, :id, :super_name, prompt: true %>
+    <br><br>
+    <%= f.label :power %>
+    <%= f.collection_select :power, @powers, :id, :name, prompt: true %>
+    <br><br>
+    <%= f.label :strength_level %>
+    <%= f.text_area :strength %>
+    <br><br>
+    <%= f.submit%>
+    <% end %>
