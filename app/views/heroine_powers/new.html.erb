@@ -1,0 +1,8 @@
+<h2>Create a new HeroinePower:</h2>
+<%= form_with model: @heroinepower do |f|  %>
+<%= f.collection_select :heroine_id, Heroine.all, :id, :super_name %>
+<%= f.collection_select :power_id, Power.all, :id, :name %>
+<%= f.label :strength %>:   
+<%= f.text_field :strength %>
+<%= f.submit %>
+<% end %></li>
