@@ -1,0 +1,9 @@
+<h1><%= @heroine.super_name %></h1>
+<br><br>
+<h3>Super Heroine Name</h3>
+<h4><%= @heroine.name %></h4>
+<br><br> 
+<h3> List of Powers </h3>
+<% Power.all.each do | power | %>
+    <%= power.name %><br>
+<% end %>
