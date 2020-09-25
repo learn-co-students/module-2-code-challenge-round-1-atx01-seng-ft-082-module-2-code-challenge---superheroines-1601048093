@@ -9,6 +9,8 @@ class HeroinePowersController < ApplicationController
 
     def new 
       @heroine_power = HeroinePower.new 
+      @heroines = Heroine.all
+      @powers = Power.all
     end 
 
     def create 
@@ -18,7 +20,7 @@ class HeroinePowersController < ApplicationController
         redirect_to new_heroine_power_path
       else 
         new_heroine_power.save 
-        redirect_to heroine_path(@heroine)
+        redirect_to heroine_path(new_heroine_power)
       end 
     end 
     
@@ -35,7 +37,7 @@ class HeroinePowersController < ApplicationController
     private 
   
     def heroine_power_params 
-      params.require(:heroine_power).permit(:strength)
+      params.require(:heroine_power).permit(:heroine_id, :power_id, :strength)
     end
 end
 
