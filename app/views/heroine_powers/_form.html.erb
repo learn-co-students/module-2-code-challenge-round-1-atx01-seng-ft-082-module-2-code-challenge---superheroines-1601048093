@@ -1,0 +1,13 @@
+
+<%=form_with model: @new_hp do |f|%>
+<%=f.label :name %>
+<%=f.collection_select :heroine_id, @heroine, :id, :name%>
+<br>
+<%=f.label :power%>
+<%=f.collection_select :power_id, @powers, :id, :name%>
+<br>
+<%=f.label :strength%>
+<%=f.text_field :strength%>
+
+<%=f.submit%>
+<%end%>
