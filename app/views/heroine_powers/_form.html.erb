@@ -1,0 +1,7 @@
+<%= form_for @heroine_power do |f| %> 
+    <%= f.collection_select :heroine_id, Heroine.all, :id, :name %>
+    <%= f.collection_select :power_id, Power.all, :id, :name %>
+    <%= f.label :strength %>  
+    <%= f.text_field :strength %> 
+    <%= f.submit "Submit" %>
+<% end %>
