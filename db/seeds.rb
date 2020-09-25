@@ -24,3 +24,10 @@ heroines = [
 ]
 
 heroines.each { |heroine| Heroine.create(heroine) }
+
+hp1 = HeroinePower.create(strength: "Weak", heroine: heroines[0], power: powers[3])
+hp2 = HeroinePower.create(strength: "Strong", heroine: heroines[1], power: powers[2])
+hp3 = HeroinePower.create(strength: "Strong", heroine: heroines[0], power: powers[0])
+hp4 = HeroinePower.create(strength: "Weak", heroine: heroines[3], power: powers[3])
+
+puts "the seed file has run!"#
