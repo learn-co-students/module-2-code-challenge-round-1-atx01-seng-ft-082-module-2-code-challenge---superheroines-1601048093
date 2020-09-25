@@ -1,0 +1,19 @@
+<% if flash[:errors] %>
+   <% flash[:errors].each do | error | %>
+       <li style="color: red"><%= error %></li><br><br>
+   <% end %>
+<% end %>
+
+
+<%= form_for @heroine_power do | f | %>
+    <%= f.label "Choose a Heroine" %>
+    <%= f.collection_select :heroine_id, @heroines, :id, :super_name %>
+    <br><br>
+    <%= f.label "Choose a Power" %>
+    <%= f.collection_select :power_id, @powers, :id, :name %>
+    <br><br>
+    <%= f.label "Strength Level" %>
+    <%= f.text_field :strength %>
+    <br><br>
+    <%= f.submit %>
+<% end %>
